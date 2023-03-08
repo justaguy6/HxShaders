@@ -42,8 +42,8 @@ public var glslVer:String = "100";
             @:privateAccess var gl = __context.gl;
 
 			 //testing da shader version
-			var prefix = "#ifdef GL_ES\n" 
-                                + '#version ${glslVer}\n'
+			var prefix = '#version ${glslVer}\n' 
+                                + "#ifdef GL_ES\n"
 				+ (precisionHint == FULL ? "#ifdef GL_FRAGMENT_PRECISION_HIGH
 				precision highp float;
 				#else
